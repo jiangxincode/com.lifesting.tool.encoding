@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            adaptable="true"
+            class="com.lifesting.tool.encoding.properties.SettingPropertyPage"
+            id="com.lifesting.tool.encoding.properties.settingpage"
+            name="Convert Setting"
+            objectClass="org.eclipse.core.resources.IProject">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.lifesting.tool.encoding.filecontri"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               id="com.lifesting.tool.encoding.resmenu"
+               label="Lifesting Tools"
+               path="additions">
+            <separator
+                  name="sp">
+            </separator>
+         </menu>
+         <action
+               class="com.lifesting.tool.encoding.ChangeFileEncodingAction"
+               enablesFor="+"
+               id="com.lifesting.tool.encoding.changeencoding"
+               label="Set Encoding"
+               menubarPath="com.lifesting.tool.encoding.resmenu/sp"
+               tooltip="set encoding of files">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.lifesting.tool.encoding.searchviewcontri"
+            targetID="org.eclipse.search.ui.views.SearchView">
+         <action
+               class="com.lifesting.tool.encoding.SearchViewSetAction"
+               icon="icon/action.bmp"
+               id="com.lifesting.tool.encoding.searchviewaction"
+               label="Set Encoding"
+               menubarPath="additions"
+               toolbarPath="additions"
+               tooltip="set encoding for all search result">
+         </action>
+      </viewContribution>
+   </extension>
+
+</plugin>

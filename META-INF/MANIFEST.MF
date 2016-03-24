@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Encoding Plug-in
+Bundle-SymbolicName: com.lifesting.tool.encoding;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.lifesting.tool.encoding.Activator
+Bundle-Vendor: LIFESTING
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jface.text,
+ org.eclipse.jface.databinding,
+ org.eclipse.core.filebuffers,
+ org.eclipse.core.filesystem,
+ org.eclipse.search
+Eclipse-AutoStart: true
